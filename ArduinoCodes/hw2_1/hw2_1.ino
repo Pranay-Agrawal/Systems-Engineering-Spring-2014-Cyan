@@ -2,7 +2,7 @@
 //Pin Definitions
 //The 74HC595 uses a serial communication 
 //link which has three pins
-const int data = 2; 
+const int data  = 2; 
 const int clock = 3;
 const int latch = 4;
 
@@ -14,7 +14,7 @@ int delayTime = 500;
         
 //
 byte bits[] = {B00000001, B00000010, B00000100, B00001000, 
-                        B00010000, B00100000, B01000000, B10000000};
+               B00010000, B00100000, B01000000, B10000000};
 /*
  * setup() - this function runs once when you turn your Arduino on
  * We set the three control pins to outputs
