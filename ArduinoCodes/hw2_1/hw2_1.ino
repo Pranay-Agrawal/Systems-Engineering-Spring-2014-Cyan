@@ -15,7 +15,7 @@ const int OFF = LOW;
 int delayTime = 500;
         
 //
-unsigned char bits[] = {B00000001, B00000010, B00000100, B00001000, 
+byte bits[] = {B00000001, B00000010, B00000100, B00001000, 
                         B00010000, B00100000, B01000000, B10000000};
 /*
  * setup() - this function runs once when you turn your Arduino on
