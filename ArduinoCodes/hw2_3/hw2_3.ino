@@ -1,8 +1,8 @@
 #include <Servo.h>
 Servo myservo;  // create servo object to control a servo
 int pos = 0;    // variable to store the servo position
-const int PMpin = 0;
-int PMvalue = 0;
+const int PMpin = 0;  // potentionmeter pin number
+int PMvalue = 0;      // potentionmeter value
 
 void setup()
 {
