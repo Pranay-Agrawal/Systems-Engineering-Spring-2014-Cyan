@@ -1,10 +1,10 @@
-// define pin numbers
+// Pin definations
 const int button1pin = 2;
 const int button2pin = 3;
 const int button3pin = 4;
 const int LEDpin = 13;
 
-// define state variables
+// State variable definations
 boolean LEDstate = LOW;
 boolean button1state;
 boolean button2state;
@@ -20,7 +20,7 @@ void setup()
 
 void loop()
 {
-    // when button is pressed, the input is shorted to the ground, and gets zero
+    // When button is pressed, the input pin is shorted to the ground, and getting zero.
     if(digitalRead(button1pin) == LOW)
     {
         LEDstate = HIGH;

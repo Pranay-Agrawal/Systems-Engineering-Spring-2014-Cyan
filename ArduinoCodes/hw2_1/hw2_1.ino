@@ -2,21 +2,19 @@
 //Pin Definitions
 //The 74HC595 uses a serial communication 
 //link which has three pins
-int data = 2; 
-int clock = 3;
-int latch = 4;
+const int data  = 2; 
+const int clock = 3;
+const int latch = 4;
 
 //Used for single LED manipulation
-int ledState = 0;
-const int ON = HIGH;
-const int OFF = LOW;
+boolean ledState = 0;
 
 //the number of milliseconds to delay between LED updates
 int delayTime = 500;
         
 //
-unsigned char bits[] = {B00000001, B00000010, B00000100, B00001000, 
-                        B00010000, B00100000, B01000000, B10000000};
+byte bits[] = {B00000001, B00000010, B00000100, B00001000, 
+               B00010000, B00100000, B01000000, B10000000};
 /*
  * setup() - this function runs once when you turn your Arduino on
  * We set the three control pins to outputs
@@ -32,7 +30,7 @@ void setup()
  * loop() - this function will start after setup finishes and then repeat
  * we set which LEDs we want on then call a routine which sends the states to the 74HC595
  */
-void loop()                     // run over and over again
+void loop()
 {
     for(int i = 0; i < 8; i++)
     {
