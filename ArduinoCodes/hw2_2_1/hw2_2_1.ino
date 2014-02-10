@@ -1,11 +1,12 @@
-// define pin numbers
+// Pin definitions
 const int button1pin = 2;
 const int LEDpin = 13;
 
-// define state variables
+// State definitions
 boolean LEDstate = LOW;
 int buttonCount = 0;
 int buttonState;
+
 // when button is pressed, the input is shorted to the ground,
 // and gets zero(LOW)
 int lastButtonState = HIGH;
@@ -14,7 +15,6 @@ void setup()
 {
   pinMode(button1pin, INPUT);
   pinMode(LEDpin, OUTPUT);
-  Serial.begin(9600);
 }
 
 void loop()
@@ -31,11 +31,11 @@ void loop()
   int n = buttonCount % 3;
   switch(n)
   {
-    Serial.println(n);  
     case 0:
       LEDstate = HIGH;
       break;
     case 1:
+       // Change the LEDstate in each loop so that it looks like flashing.
       LEDstate = !LEDstate;
       break;
     case 2:
@@ -43,5 +43,6 @@ void loop()
       break;
   }
   digitalWrite(LEDpin, LEDstate);
+  // Delay 200ms to show the flashing effect.
   delay(200);
 }
