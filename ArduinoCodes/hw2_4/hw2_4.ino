@@ -83,6 +83,8 @@ void loop()
     Serial.print("\tVelocity: ");
     Serial.println(velocity, DEC);
   }
+  // Assume the maximum speed is 40.
+  // The index ranges from 0 to 11.
   colorIdx = velocity > 0 ? 1.0*velocity/40*11 : -1.0*velocity/40*11;
   setColor(ledAnalogOne, (byte*)COLOR[colorIdx]);
 }
