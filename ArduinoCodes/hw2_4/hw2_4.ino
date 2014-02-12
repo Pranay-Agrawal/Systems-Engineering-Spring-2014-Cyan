@@ -83,7 +83,7 @@ void loop()
     Serial.print("\tVelocity: ");
     Serial.println(velocity, DEC);
   }
-  colorIdx = 1.0*velocity/40*11 > 0 ? 1.0*velocity/40*11 : -1.0*velocity/40*11;
+  colorIdx = velocity > 0 ? 1.0*velocity/40*11 : -1.0*velocity/40*11;
   setColor(ledAnalogOne, (byte*)COLOR[colorIdx]);
 }
 
