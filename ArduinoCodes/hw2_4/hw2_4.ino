@@ -91,7 +91,7 @@ void loop()
 
 void setColor(int* led, const byte* color){
  for(int i = 0; i < 3; i++){             //iterate through each of the three pins (red green blue)
-   analogWrite(led[i], color[i]);        //set the analog output value of each pin to the input value (ie led[0] (red pin) to 255 (red input color)
+   analogWrite(led[i], ~color[i]);        //set the analog output value of each pin to the input value (ie led[0] (red pin) to 255 (red input color)
  }
 }
 
